@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Conteudo +18</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      transform: scale(0.8);
+      transform-origin: top center;
+    }
+
+    #login-screen, #main-content {
+      display: none;
+    }
+
+    #login-screen.active, #main-content.active {
+      display: block;
+    }
+
+    .login-box {
+      width: 300px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .login-box h2 {
+      color: #cc0000;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #cc0000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .qr-code {
+      margin-top: 20px;
+    }
+
+    .qr-code img {
+      width: 200px;
+      height: auto;
+      margin-top: 10px;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #cc0000;
+    }
+
+    header p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .video-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+
+    .video-box iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .pagination {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .pagination a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: #fff;
+      color: #cc0000;
+      text-decoration: none;
+      border: 1px solid #cc0000;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .pagination a:hover,
+    .pagination a.active {
+      background: #cc0000;
+      color: white;
+    }
+
+    .pagination a#page2-link {
+      display: none;
+    }
+
+    /* Banner fixo no topo da página */
+    .right-banner-top {
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      width: 120px;
+      z-index: 1000;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      background: #fff;
+    }
+
+    .right-banner-top img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .right-banner-top {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .video-box iframe {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tela de Login -->
+  <div id="login-screen" class="active">
+    <div class="login-box">
+      <h2>Acesso Restrito +18</h2>
+      <input type="text" id="username" placeholder="Login" />
+      <input type="password" id="password" placeholder="Senha" />
+      <button onclick="login()">Entrar</button>
+
+      <div class="qr-code">
+        <p><strong>Pagar acesso mensal R$ 29,90</strong></p>
+        <img src="qr-code.png" alt="QR Code PIX" />
+      </div>
+
+      <button onclick="window.open('https://wa.me/5516996286622', '_blank')">
+        Enviar comprovante
+      </button>
+    </div>
+  </div>
+
+  <!-- Conteudo Principal -->
+  <div id="main-content">
+    <div class="right-banner-top">
+      <img src="qr-code.png" alt="Anuncio QR Code">
+    </div>
+
+    <header>
+      <h1>Conteudo Adulto +18</h1>
+      <p>Entrar apenas se for maior de idade</p>
+    </header>
+
+    <main id="video-container">
+      <!-- Videos injetados aqui -->
+    </main>
+
+    <div class="pagination">
+      <a href="index.html" class="active">1</a>
+      <a id="page2-link" href="pagina2.html">2</a>
+    </div>
+  </div>
+
+  <script>
+    const videoUrls = [
+      "https://www.xvideos.com/embedframe/itovaddbcd3",
+      "https://www.xvideos.com/embedframe/euodcbfb5",
+      "https://www.xvideos.com/embedframe/oitptkda494",
+      "https://www.xvideos.com/embedframe/uaihlab3195",
+      "https://www.xvideos.com/embedframe/ohebcvb1c67",
+      "https://www.xvideos.com/embedframe/ufovhpb5000",
+      "https://www.xvideos.com/embedframe/ufhoapo5541",
+      "https://www.xvideos.com/embedframe/ohlhidd3ce2",
+      "https://www.xvideos.com/embedframe/udvvkvb1f96",
+      "https://www.xvideos.com/embedframe/oitkkhh9649"
+    ];
+
+    function renderVideos() {
+      const container = document.getElementById("video-container");
+      container.innerHTML = "";
+
+      const validVideos = videoUrls.filter(url => typeof url === "string" && url.trim() !== "");
+      const showPagination = validVideos.length > 50;
+      const page2Link = document.getElementById("page2-link");
+      page2Link.style.display = showPagination ? "inline-block" : "none";
+
+      validVideos.slice(0, 50).forEach(url => {
+        const div = document.createElement("div");
+        div.className = "video-box";
+
+        const iframe = document.createElement("iframe");
+        iframe.src = url;
+        iframe.allowFullscreen = true;
+        iframe.setAttribute("allow", "autoplay; fullscreen");
+        div.appendChild(iframe);
+
+        container.appendChild(div);
+      });
+    }
+
+    function isLogged() {
+      const loggedAt = localStorage.getItem('loggedAt');
+      if (!loggedAt) return false;
+      return (Date.now() - Number(loggedAt)) < 60 * 1000;
+    }
+
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === "admin" && pass === "admin") {
+        localStorage.setItem('loggedAt', Date.now());
+        showMainContent();
+      } else {
+        alert("Login ou senha incorretos");
+      }
+    }
+
+    function showMainContent() {
+      document.getElementById("login-screen").classList.remove("active");
+      document.getElementById("main-content").classList.add("active");
+      renderVideos();
+    }
+
+    window.onload = () => {
+      if (isLogged()) {
+        showMainContent();
+      } else {
+        document.getElementById("login-screen").classList.add("active");
+      }
+    };
+  </script>
+
+</body>
+</html>
